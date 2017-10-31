@@ -30,21 +30,19 @@ class IterativeLookupBST {
 
         while (start < end) {
 
-            int mid = (int) Math.floor((end-start)/2);
-            int current = start + mid;
-            System.out.printf("Mid: %d, Current: %d, Start: %d, End: %d\n", mid, current, start, end);
+            int mid = (int) Math.floor((end+start)/2);
 
-            if (array[current] == wantedValue) {
+            if (array[mid] == wantedValue) {
 
-                return current;
+                return mid;
 
-            } else if (array[current] < wantedValue) {
+            } else if (array[mid] < wantedValue) {
 
-                start = current;
+                start = mid+1;
 
-            } else if (array[current] > wantedValue) {
+            } else if (array[mid] > wantedValue) {
 
-                end = current;
+                end = mid-1;
 
             }
 
