@@ -12,7 +12,7 @@ class IterativeLookupBST {
         int lookupValue = Integer.parseInt(args[0]);
         System.out.printf("%d\n", lookupValue);
 
-        int index =  FindValue(list, lookupValue, 0, list.length);
+        int index =  FindValue(list, lookupValue, 0, list.length-1);
 
         if (index != -1) {
 
@@ -28,7 +28,7 @@ class IterativeLookupBST {
 
     private static int FindValue(int[] array, int wantedValue, int start, int end) {
 
-        while (start < end) {
+        while (start <= end) {
 
             int mid = (int) Math.floor((end+start)/2);
 
